@@ -5,7 +5,8 @@
 class Presentator{
 -long_id : int
 -name : String
--abstimmung: Abstimmung}
+-abstimmung: Abstimmung
+}
 
 class Nutzer{
 -long_id :int
