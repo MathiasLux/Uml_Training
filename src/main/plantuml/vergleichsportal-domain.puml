@@ -21,9 +21,11 @@ class Kriterien{
 -name : String
 -details : String
 -wichtung : int
--wertung : Wertung}
+-wertung : Wertung
+}
 
 class Wertung{
--punkte : decimal}
+-punkte : decimal
+}
 
 @enduml
