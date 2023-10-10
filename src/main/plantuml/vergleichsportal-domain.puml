@@ -1,27 +1,29 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+class Presentator{
+-long_id : int
+-name : String
+-abstimmung: Abstimmung}
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+class Nutzer{
+-long_id :int
+-nick_name : String
 }
-
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Abstimmung{
+-long_id : int
+-name : String
+-kriterien : Kriterien
 }
+class Kriterien{
+-long_id : int
+-name : String
+-details : String
+-wichtung : int
+-wertung : Wertung}
+
+class Wertung{
+-punkte : decimal}
 
 @enduml
