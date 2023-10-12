@@ -2,31 +2,52 @@
 'https://plantuml.com/class-diagram
 
 
-class Presentator{
--long_id : int
--name : String
--abstimmung: Abstimmung
-}
 
 class Nutzer{
--long_id :int
--nick_name : String
+-long : id
+-String : nick_name
 }
+
+enum Role {
+TECHNIKER
+HR
+...
+}
+
+entity Profil{
+-String : vorname
+-String : nachname
+-String : email
+}
+
+class Präsentator{
+-String : name
+-abstimmung : Abstimmung
+}
+
 class Abstimmung{
--long_id : int
--name : String
--kriterien : Kriterien
+-long : id
+-String : name
+
 }
 class Kriterien{
--long_id : int
--name : String
--details : String
--wichtung : int
--wertung : Wertung
+-long : id
+-String : name
+-String : details
+-int wichtung
+-abstimmung : Abstimmung
 }
 
 class Wertung{
--punkte : decimal
+-kriterien : Kriterien
+-decimal : punkte
 }
+
+Abstimmung "1" .. "n" Kriterien
+Nutzer "1" .> "n" Wertung
+Wertung "1" .> "n" Kriterien
+Nutzer .. Role
+Präsentator "1" .> "n" Abstimmung
+Profil .. Präsentator
 
 @enduml
