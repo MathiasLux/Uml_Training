@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Kriterien{
+-long : id
+-String : name
+-String : details
+-int wichtung
+-abstimmung : Abstimmung
+}
+
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+enum Role {
+TECHNIKER
+HR
+...
+}
+@enduml

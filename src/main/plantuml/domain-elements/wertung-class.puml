@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Wertung{
+-kriterien : Kriterien
+-decimal : punkte
+}
+
+@enduml

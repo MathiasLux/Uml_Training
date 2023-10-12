@@ -1,47 +1,16 @@
 @startuml
 'https://plantuml.com/class-diagram
 
+!include domain-elements/profile-entity.puml
+!include domain-elements/nutzer-class.puml
+!include domain-elements/role-enum.puml
+!include domain-elements/praesentator-class.puml
+!include domain-elements/abstimmung-class.puml
+!include domain-elements/kriterien-class.puml
+!include domain-elements/wertung-class.puml
 
 
-class Nutzer{
--long : id
--String : nick_name
-}
 
-enum Role {
-TECHNIKER
-HR
-...
-}
-
-entity Profil{
--String : vorname
--String : nachname
--String : email
-}
-
-class Präsentator{
--String : name
--abstimmung : Abstimmung
-}
-
-class Abstimmung{
--long : id
--String : name
-
-}
-class Kriterien{
--long : id
--String : name
--String : details
--int wichtung
--abstimmung : Abstimmung
-}
-
-class Wertung{
--kriterien : Kriterien
--decimal : punkte
-}
 
 Abstimmung "1" .. "n" Kriterien
 Nutzer "1" .> "n" Wertung

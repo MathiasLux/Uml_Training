@@ -1,0 +1,8 @@
+@startuml
+
+entity Profil{
+-String : vorname
+-String : nachname
+-String : email
+}
+@enduml
